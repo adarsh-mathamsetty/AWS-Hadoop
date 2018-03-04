@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<p>Harikrishna, Bathala</p>
+<p>5489</p>
+<form action="/runhadoop" method="post">
+    <p>Display data:</p>
+    <input type="submit" name="hadsub" id="hadsub" />
+<ul>
+        {% for fname in data %}
+        <li>{{ fname }}</li>
+        {% endfor %}
+</ul>
+<hr>
+</form>
+<form action="/timetaken" method="post">
+    <p> Time taken:</p>
+    <input type="submit" name="timesub" id="timesub" />
+
+
+    {{ timediff }}
+
+</form>
+<hr>
+<form action="dynamic" method="post">
+    <p>No of mappers:</p>
+    <input type="text" name="mappers" id="mappers" />
+    <input type="text" name="red" id="red"/>
+    <input type="submit" name="dynsub" id="dynsub"/>
+
+
+    <ul>
+        {% for fname in data1 %}
+        <li>{{ fname }}</li>
+        {% endfor %}
+</ul>
+</form>
+<hr>
+<form action="/range" method="post">
+    <h4>Range</h4>
+    <input type="text" name="maprange" id="maprange"/>
+    <input type="text" name="redrange" id="redrange"/>
+    <input type="submit" name="ransub" id="ransub"/>
+</form>
+</body>
+</html>
